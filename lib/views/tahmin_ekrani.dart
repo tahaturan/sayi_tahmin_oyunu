@@ -71,7 +71,8 @@ class _TahminEkraniState extends State<TahminEkrani> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => SonucEkrani(sonuc: true),
+                            builder: (context) => SonucEkrani(
+                                sonuc: true, gelenSonuc: rastgeleSayi),
                           ));
                       return;
                     }
@@ -88,7 +89,8 @@ class _TahminEkraniState extends State<TahminEkrani> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => SonucEkrani(sonuc: false),
+                            builder: (context) => SonucEkrani(
+                                sonuc: false, gelenSonuc: rastgeleSayi),
                           ));
                     }
                     tfTahmin.text = "";

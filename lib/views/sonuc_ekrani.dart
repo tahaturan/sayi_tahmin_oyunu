@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SonucEkrani extends StatefulWidget {
+  int gelenSonuc;
   bool sonuc;
-  SonucEkrani({Key? key, required this.sonuc}) : super(key: key);
+  SonucEkrani({Key? key, required this.sonuc, required this.gelenSonuc})
+      : super(key: key);
 
   @override
   State<SonucEkrani> createState() => _SonucEkraniState();
@@ -41,6 +43,10 @@ class _SonucEkraniState extends State<SonucEkrani> {
               child: widget.sonuc
                   ? Image.asset("assets/images/winner.png")
                   : Image.asset("assets/images/lose.jpg"),
+            ),
+            Text(
+              "Sayi: ${widget.gelenSonuc}",
+              style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
             ElevatedButton(
               onPressed: () {
